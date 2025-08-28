@@ -58,3 +58,7 @@ test_*.xlsx
 
 # Logs
 *.log
+
+# MCP client settings
+.claude/
+.mcp/

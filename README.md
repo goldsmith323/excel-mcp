@@ -2,6 +2,8 @@
 
 A Model Context Protocol (MCP) server for Excel file operations using Python.
 
+**Author:** Hossein Zargar
+
 ## Features
 
 - **get_document_info**: Get basic information about Excel documents including sheet names, dimensions, and metadata
@@ -15,23 +17,44 @@ pip install -r requirements.txt
 ```
 
 2. Run the server:
+
+**On Linux/macOS:**
 ```bash
-python3 -m src.excel_mcp.server
+python3 -m src.excel_mcp.simple_server
+```
+
+**On Windows:**
+```cmd
+python -m src.excel_mcp.simple_server
 ```
 
 ## Usage
 
-The server automatically uses `MasterBlaster v1.4.2.xlsx` in the current directory, or you can set the `EXCEL_FILE_PATH` environment variable:
+Set the `EXCEL_FILE_PATH` environment variable to specify your Excel file:
 
+**On Linux/macOS:**
 ```bash
-EXCEL_FILE_PATH=/path/to/your/file.xlsx python3 -m src.excel_mcp.server
+EXCEL_FILE_PATH=/path/to/your/file.xlsx python3 -m src.excel_mcp.simple_server
 ```
 
-## Development
+**On Windows:**
+```cmd
+set EXCEL_FILE_PATH=path\to\your\file.xlsx
+python -m src.excel_mcp.simple_server
+```
 
-Test the Excel operations without the MCP server:
+## Quick Start
+
+The repository includes sample Excel files for testing. To get started quickly:
+
+**On Linux/macOS:**
 ```bash
-python3 test_excel.py
+./start_simple_monitor.sh
+```
+
+**On Windows:**
+```cmd
+start_simple_monitor.bat
 ```
 
 ## MCP Tools
